@@ -1,3 +1,3 @@
 # MakeYouQuitSmoke3000
 
-##How to use
+## How to use
