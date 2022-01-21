@@ -7,8 +7,8 @@
 ```
 
 ```console
-~$ docker run -d -it -p 1883:1883 -v ./on_nano/end_smoke/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto 
-~$ docker run -d -it -p 1884:1884 -v ./on_nano/get_result/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto
+~$ docker run -d -it -p 1883:1883 -v $(pwd)/on_nano/end_smoke/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto 
+~$ docker run -d -it -p 1884:1884 -v $(pwd)/on_nano/get_result/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto
 ~$ python3 ./on_nano/get_result/get_result.py
 ~$ python3 ./on_nano/send_smoke/smoke.py
 ~$ ./stream/stream.sh
